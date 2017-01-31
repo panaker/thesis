@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>TEST GENERATOR</title>
+ 
+ 
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+<body>
+
+  From presented categories (with numbers of groups of questions in each of them in parenthesis):
+
+    {% for entry in entries %}
+  <li>
+    {{ entry }}
+    <div>{{ entry.text|safe }}</div>
+  </li>
+{% else %}
+  <li><em>The file was not loaded correctly, the process is corrupted!</em></li>
+{% endfor %}
+
+  <em>specify how many questions would you like the test to be consisted of (not more than 20!)? 
+  <br>(Please write a numbers of questions from each categories separated by comma.)</em>
+
+
+    <form action="" method="POST">
+        <input type="text" name="text2">
+        <input type="submit" name="my-form2" value="Send2">
+    </form>
+
+ 
+    <!--<input type="radio" name="options" id="option1" value="option1"> Option1 </input><br>-->
+
+    
+</body>
+ 
+</html>
