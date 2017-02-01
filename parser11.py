@@ -251,7 +251,7 @@ def parse(t):
 							else:
 								image += t[i]
 								i+=1
-						image = os.path.join(os.getcwd(),"images",image)
+						image = os.path.join(os.path.dirname(os.path.abspath(__file__)),"images",image)
 						images.append(image)
 						w,h = get_image_size(image)
 						#print(w)
@@ -312,7 +312,7 @@ def parse(t):
 							else:
 								ima += t[i]
 								i+=1
-						ima = os.path.join(os.getcwd(),"images",ima)
+						ima = os.path.join(os.path.dirname(os.path.abspath(__file__)),"images",ima)
 						tempImg.append(ima)
 						w,h = get_image_size(ima)
 						#print(w)

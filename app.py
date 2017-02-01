@@ -148,10 +148,10 @@ def test_post():
 
 	#print(listOfTests)
 	import os
-	if not os.path.isdir('myTest'):
-		os.makedirs('myTest')
+	if not os.path.isdir(os.path.join(os.path.dirname(os.path.abspath(__file__)),'myTest')):
+		os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)),'myTest'))
 	
-	path = os.path.join(os.getcwd(),'myTest','group')
+	path = os.path.join(os.path.dirname(os.path.abspath(__file__)),'myTest','group')
 	pdf.go(listOfTests,path,session['title'])
 	pdf.go0(listOfTests,path,session['title'])
 	for i in range(0,len(listOfTests)):
